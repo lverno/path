@@ -1,0 +1,15 @@
+[package]
+name = "path"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+strip = true
+panic = "abort"
+lto = true
+codegen-units = 1
+
+[dependencies]
+anyhow = "1.0.65"
+clap = { version = "4.0.11", features = ["derive"] }
+winreg = "0.10.1"
